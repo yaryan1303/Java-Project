@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="work" class="in.spring.beans.Work" autowire-candidate="false">
+        <constructor-arg value="foottttball"/>
+        <constructor-arg value="Math"/>
+    </bean>
+    
+     <bean id="work1" class="in.spring.beans.Work" >
+        <constructor-arg value="football"/>
+        <constructor-arg value="Math"/>
+    </bean>
+
+    <bean id="student" class="in.spring.beans.Student" scope="prototype" autowire="constructor">
+        <constructor-arg value="23" index="0"/>
+        <constructor-arg value="aryan" index="1"/>
+        <constructor-arg value="mumbai" index="2"/>
+       <!-- Explicitly reference the work bean -->
+    </bean>
+
+</beans>
